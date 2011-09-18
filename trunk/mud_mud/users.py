@@ -1,0 +1,1 @@
+users = {'dominic':{'type':'human'}}
