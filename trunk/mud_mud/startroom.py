@@ -39,7 +39,7 @@ To the west, darkness has fallen.\n''')
         clientsocket.send('You walk South')
         return 'South.South1'
     if cur_com == 'east':
-        clientsocket.send('You walk East')
+        clientsocket.send('You walk East\nViable command(s): look')
         return 'East.East1'
     if cur_com == 'west':
         clientsocket.send('You walk West')

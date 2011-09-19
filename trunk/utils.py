@@ -26,13 +26,13 @@ def proccess(data, clientsocket, instance):
 			clientsocket.send(msg)
 		
 		elif (data.split()[0]) == 'load':
-			if (data.split()[1:]) == '' or len(data.split()) == 1:
+			if len(data.split()[1:]) == '' or len(data.split()) == 1:
 				print 'The user forgot the mud...'
 				clientsocket.send('Please specify a mud to load.\n')
 			else:
 				print 'Serving the dish to the user...'
 				for x in range(len(config.get('mudlist', 'list'))):
-					if (config.get(('mud'+str(x)), 'name')) == (str(data.split()[1:][0])):
+					if (config.get(('mud'+str(x)), 'name')).lower() == (str(data.split()[1:][0])).lower():
 						path_to_mud = config.get(('mud'+str(x)), 'dir')
 						clientsocket.send('Completed loading of the MUD "'+str(data.split()[1:][0])+'''" ("'''+str(path_to_mud)+'''")
 Please enter your desired username...''')

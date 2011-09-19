@@ -1,16 +1,14 @@
 from socket import *
 import thread
+import os
 from utils import proccess, human
-import logging
+
 
 host = 'localhost'
 port = 50012
-#LOG_FILENAME = 'example.log'
-#logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
-
-#logging.debug('This message should go to the log file')
 
 
+os.system('title DTMUD Server')
 
 def handler(clientsocket, clientaddr):
 	instance = human()

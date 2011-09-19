@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 from socket import *
 from utils import proccess, human
+import os
+
+os.system('title DTMUD Server')
 
 host = 'localhost'
 port = 50012
+
+print 'DTMUD Server\nIs set to connect to localhost:50012.\nEnter either "user" mode or "admin" mode to continue'
 
 if __name__ == '__main__':
 

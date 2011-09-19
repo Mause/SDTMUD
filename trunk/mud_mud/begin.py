@@ -24,7 +24,7 @@ You can either exit, or look around some more.\nviable command(s): look, exit\n'
                 instance.dirty = 'false'
                 return 'secondroom'
                     
-            elif first == 'look':
+            elif cur_com == 'look':
                 if room == 'begin':
                     clientsocket.send('''There is a lot of dust, which is partly held up on spider webs\nAs your eyes trace the webs,\na small rock falls and breaks the webs above your head,
 dumping dust all over the rags that cover your body\nYou struggle out of the door\nviable command(s): look\n''')
