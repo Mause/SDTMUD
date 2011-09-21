@@ -1,1 +1,0 @@
-print "A user is entering the miscellaneous parts of this world..."
