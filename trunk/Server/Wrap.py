@@ -18,17 +18,17 @@ os.system('title DTMUD Server')
 def handler(clientsocket, clientaddr):
     instance = human()
     instance.time = time.time() 
-    print "Accepted connection from: ", clientaddr
+    print '['str(time.ctime())+"] Accepted connection from: ", clientaddr
     data = ''
     while data != 'user' and data != 'admin':
         data = clientsocket.recv(1024)
         if data == 'user':
-            print 'non-admin user detected'
+            print '['+str(time.ctime())+'] non-admin user detected'
             clientsocket.send('non-admin user detected')
             while 1:
                 data = clientsocket.recv(1024)
                 if data:
-                    print 'Recieved: %s' % data
+                    print '['str(time.ctime())+']Recieved: %s' % data
                     status=proccess(data, clientsocket, instance)
                     try:
                         if status == 'exit':
@@ -43,12 +43,12 @@ def handler(clientsocket, clientaddr):
         else:
             clientsocket.send('incorrect response\nPlease enter either "user" or "admin" for the appropriate mode!')
             data = clientsocket.recv(1024)
-    print 'Well. Some bastard decided to kill me, so goodbye cruel world'
+    print '['+str(time.ctime())+'] Well. Some bastard decided to kill me, so goodbye cruel world'
         
 
 
 def console(clientsocket):
-    print 'Admin user detected!'
+    print '['+str(time.ctime())+'] Admin user detected!'
     clientsocket.send('Admin user detected!\nPlease enter password')
     cur_com = clientsocket.recv(1024)
     while cur_com != admin_pass:
@@ -60,11 +60,11 @@ def console(clientsocket):
         if not cur_com:
             break
         else:
-            print 'Recieved: %s' % cur_com
+            print '['+str(time.ctime())+'] Recieved: %s' % cur_com
             if cur_com == 'help':
-                msg = str('Alerting authorities!\nDialing 911, 121, 000 and every other emergency number known to man!\nPlease remain Calm!')
+                msg = str('['+str(time.ctime())+'] Alerting authorities!\nDialing 911, 121, 000 and every other emergency number known to man!\nPlease remain Calm!')
             else:
-                msg = str('this feature is not yet up to scratch\nIE, it is useless as of yet.')
+                msg = str('['+str(time.ctime())+'] this feature is not yet up to scratch\nIE, it is useless as of yet.')
             clientsocket.send(msg)
     clientsocket.close()
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     serversocket.listen(2)
     
     while 1:
-        print "Server is listening for connections\n"
+        print '['str(time.ctime())+"] Server is listening for connections\n"
 
         clientsocket, clientaddr = serversocket.accept()
         thread.start_new_thread(handler, (clientsocket, clientaddr))
