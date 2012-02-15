@@ -60,6 +60,7 @@ def run_loop(clientsocket, instance, path_to_mud, run_script):
 	print 'The beginning result was', result
 	while result != '':
 		if result == 'exit':
+			print 'exit token/command recieved from client, closing connection and telling client to hit enter to exit'
 			return 'exit'
 		else:
 			print 'About to do these things:'
@@ -76,6 +77,6 @@ class human:        # Human template. saved to file on game exit
 	stamina = 10    # Ditto
 	max_stamina = 20# Maximum obtainable stamina
 	dirty = False   # Whether or not you are dirty
-	horse = False   # If you have a horse. Point unsure; does not enable faster traversing. May allow something similar to teleporting, but then i have to make a map :(
+	horse = False   # If you have a horse. Purpose unsure; does not enable faster traversing. May allow something similar to teleporting, but then i have to make a map :(
 	inventory = {}  # Inventory
 	time = 0        # starting time

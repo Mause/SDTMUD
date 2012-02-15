@@ -31,17 +31,19 @@ def handler(clientsocket, clientaddr):
                     print 'Recieved: %s' % data
                     status=proccess(data, clientsocket, instance)
                     try:
-                        if status == 'quit':
+                        if status == 'exit':
                             break
                     except AttributeError:
                         pass
             clientsocket.close()
+            break
         elif data == 'admin':
             clientsocket.send('Admin user detected!')
             console(clientsocket)
         else:
             clientsocket.send('incorrect response\nPlease enter either "user" or "admin" for the appropriate mode!')
             data = clientsocket.recv(1024)
+    print 'Well. Some bastard decided to kill me, so goodbye cruel world'
         
 
 
