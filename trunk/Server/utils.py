@@ -8,7 +8,7 @@ config.readfp(configfh)
 
 
 def proccess(data, clientsocket, instance):
-	print '['str(time.ctime())+'''] Beginning to proccess data with 'process("'''+str(data+'''", clientsocket, instance)' ''')
+	print '['+str(time.ctime())+'''] Beginning to proccess data with 'process("'''+str(data+'''", clientsocket, instance)' ''')
 	if data != '':
 		print '['+str(time.ctime())+'] Data was "iffed"'
 		if (data.split()[0]) == 'help':

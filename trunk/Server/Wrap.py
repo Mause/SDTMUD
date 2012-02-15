@@ -18,7 +18,7 @@ os.system('title DTMUD Server')
 def handler(clientsocket, clientaddr):
     instance = human()
     instance.time = time.time() 
-    print '['str(time.ctime())+"] Accepted connection from: ", clientaddr
+    print '['+str(time.ctime())+"] Accepted connection from: ", clientaddr
     data = ''
     while data != 'user' and data != 'admin':
         data = clientsocket.recv(1024)
@@ -28,7 +28,7 @@ def handler(clientsocket, clientaddr):
             while 1:
                 data = clientsocket.recv(1024)
                 if data:
-                    print '['str(time.ctime())+']Recieved: %s' % data
+                    print '['+str(time.ctime())+'] Recieved: %s' % data
                     status=proccess(data, clientsocket, instance)
                     try:
                         if status == 'exit':
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     serversocket.listen(2)
     
     while 1:
-        print '['str(time.ctime())+"] Server is listening for connections\n"
+        print '['+str(time.ctime())+"] Server is listening for connections\n"
 
         clientsocket, clientaddr = serversocket.accept()
         thread.start_new_thread(handler, (clientsocket, clientaddr))
