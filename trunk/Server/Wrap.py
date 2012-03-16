@@ -3,6 +3,12 @@ import thread
 import os
 from utils import proccess, human
 import time
+import logging
+
+logging.basicConfig()
+log = logging.getLogger("DTMUDS")
+log.setLevel(logging.DEBUG) #set verbosity to show all messages of severity >= DEBUG
+
 
 ##########################
 admin_pass = 'manam'
@@ -15,15 +21,27 @@ port = 50012
 
 os.system('title DTMUD Server')
 
+
+def debug(data):
+    data=str(data)
+    log.debug(data)
+    #print 
+
+def info(data):
+    data=str(data)
+    log.info('['+str(time.ctime())+'] '+data)
+    #print '['+str(time.ctime())+'] '+data
+
+
 def handler(clientsocket, clientaddr):
     instance = human()
-    instance.time = time.time() 
-    print '['+str(time.ctime())+"] Accepted connection from: ", clientaddr
+    instance.time = time.time()
+    info('Accepted connection from: '+str(clientaddr))
     data = ''
     while data != 'user' and data != 'admin':
         data = clientsocket.recv(1024)
         if data == 'user':
-            print '['+str(time.ctime())+'] non-admin user detected'
+            info('non-admin user detected')
             clientsocket.send('non-admin user detected')
             while 1:
                 data = clientsocket.recv(1024)
@@ -83,9 +101,13 @@ if __name__ == "__main__":
     serversocket.listen(2)
     
     while 1:
-        print '['+str(time.ctime())+"] Server is listening for connections\n"
+        info('Server is listening for connections\n')
 
-        clientsocket, clientaddr = serversocket.accept()
+        try:
+            clientsocket, clientaddr = serversocket.accept()
+        except KeyboardInterrupt:
+            pass
+            #log.close()
         thread.start_new_thread(handler, (clientsocket, clientaddr))
     serversocket.close()
 
