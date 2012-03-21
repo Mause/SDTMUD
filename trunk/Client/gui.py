@@ -90,9 +90,6 @@ def Button1(arg=1):
 	#textbox.onAdd(text_contents)
 	
 
-
-
-
 frame = Frame(root)
 
 button = Button(root, text="Go", command = Button1)
@@ -100,20 +97,12 @@ w = Label(frame, text=">>")
 text = Entry(frame)
 textbox = AutoScrollListBox_demo(root)
 
-
 root.bind('<Return>', Button1)
-
-
-
-
 
 button.pack(side=BOTTOM)
 w.pack(side='left')
 text.pack(side='left')
 frame.pack(side=BOTTOM)
-
-
-
 
 textbox.listbox_log.grid(row=0, column=0)
 textbox.listbox_log.grid(sticky='nsew')

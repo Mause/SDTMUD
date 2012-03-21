@@ -1,0 +1,1 @@
+print "This server is running Dominic's test chat server"
