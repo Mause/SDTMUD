@@ -2,7 +2,7 @@ def run_room(clientsocket, instance):
     room = 'secondroom'
     cur_com = clientsocket.recv(1024)
     print instance.username, 'entered', room
-    clientsocket.send('''You have entered into a large underground cave,\n complete with bats and underground stream.
+    clientsocket.send('''You have entered into a large underground cave,\n complete with bats and an underground stream.
 You notice some rope on the ground\nViable commands: look rope\n''')
     cur_com = clientsocket.recv(1024)
     while 1:

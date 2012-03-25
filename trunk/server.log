@@ -1,0 +1,35 @@
+2012-03-21 21:23:10,792 INFO [Wed Mar 21 21:23:10 2012] Server is listening for connections
+
+2012-03-21 21:23:11,263 INFO [Wed Mar 21 21:23:11 2012] Server is listening for connections
+
+2012-03-21 21:23:11,263 INFO [Wed Mar 21 21:23:11 2012] Accepted connection from: ('127.0.0.1', 58819)
+2012-03-21 21:23:24,272 INFO [Wed Mar 21 21:23:24 2012] non-admin user detected
+2012-03-21 21:25:00,476 INFO [Wed Mar 21 21:25:00 2012] Server is listening for connections
+
+2012-03-21 21:25:00,661 INFO [Wed Mar 21 21:25:00 2012] Server is listening for connections
+
+2012-03-21 21:25:00,661 INFO [Wed Mar 21 21:25:00 2012] Accepted connection from: ('127.0.0.1', 58839)
+2012-03-21 21:30:09,332 INFO [Wed Mar 21 21:30:09 2012] Server is listening for connections
+
+2012-03-21 21:30:09,767 INFO [Wed Mar 21 21:30:09 2012] Server is listening for connections
+
+2012-03-21 21:30:09,767 INFO [Wed Mar 21 21:30:09 2012] Accepted connection from: ('127.0.0.1', 58975)
+2012-03-21 21:30:14,029 INFO [Wed Mar 21 21:30:14 2012] non-admin user detected
+2012-03-21 21:49:52,812 INFO [Wed Mar 21 21:49:52 2012] Server is listening for connections
+
+2012-03-21 21:49:53,171 INFO [Wed Mar 21 21:49:53 2012] Server is listening for connections
+
+2012-03-21 21:49:53,171 INFO [Wed Mar 21 21:49:53 2012] Accepted connection from: ('127.0.0.1', 59317)
+2012-03-21 21:49:56,733 INFO [Wed Mar 21 21:49:56 2012] non-admin user detected
+2012-03-21 21:52:54,387 INFO [Wed Mar 21 21:52:54 2012] Server is listening for connections
+
+2012-03-21 21:52:54,778 INFO [Wed Mar 21 21:52:54 2012] Server is listening for connections
+
+2012-03-21 21:52:54,779 INFO [Wed Mar 21 21:52:54 2012] Accepted connection from: ('127.0.0.1', 59329)
+2012-03-21 21:52:57,789 INFO [Wed Mar 21 21:52:57 2012] non-admin user detected
+2012-03-21 21:54:23,704 INFO [Wed Mar 21 21:54:23 2012] Server is listening for connections
+
+2012-03-21 21:54:24,036 INFO [Wed Mar 21 21:54:24 2012] Server is listening for connections
+
+2012-03-21 21:54:24,036 INFO [Wed Mar 21 21:54:24 2012] Accepted connection from: ('127.0.0.1', 59343)
+2012-03-21 21:54:27,131 INFO [Wed Mar 21 21:54:27 2012] non-admin user detected

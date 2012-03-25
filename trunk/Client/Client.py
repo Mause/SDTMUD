@@ -13,7 +13,11 @@ if __name__ == '__main__':
     buf = 1024
     addr = (host, port)
     clientsocket = socket(AF_INET, SOCK_STREAM)
-    clientsocket.connect(addr)
+    #try:
+    if True:
+        clientsocket.connect(addr)
+    #except:# socket.error:
+     #   print "Couldn't connect to the server;\nare you have the right address and that the server is running?"
     while 1:
         data = raw_input(">> ")
         if not data:
@@ -22,7 +26,7 @@ if __name__ == '__main__':
         else:
             clientsocket.send(data)
             data = clientsocket.recv(buf)
-            if not data:
+            if not data or data == '':
                 clientsocket.send('')
                 break
             else:

@@ -1,5 +1,5 @@
 import os
-os.chdir(os.getcwd()+'\mud_mud')
+os.chdir(os.getcwd()+'\dtmud')
 print os.getcwd()
 import time
 x = 1
