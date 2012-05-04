@@ -1,1 +1,0 @@
-checking c:\users\Mause\Dropbox\python\dtmud\trunk\server\wrap.py
