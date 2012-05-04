@@ -21,7 +21,7 @@ LOG = logging.getLogger("DTMUDS")
 HDLR = logging.FileHandler('../server.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 HDLR.setFormatter(formatter)
-LOG.addHandler(hdlr)
+LOG.addHandler(HDLR)
 LOG.setLevel(logging.DEBUG)
 #set verbosity to show all messages of severity >= DEBUG
 
