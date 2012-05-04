@@ -1,6 +1,0 @@
-intro You find yourself in a dark room
-options north south
-north_room north.north1
-north_info a castle
-south_room south.south1
-south_info a dark alleyway
