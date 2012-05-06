@@ -29,7 +29,7 @@ LOG.setLevel(logging.DEBUG)
 ADMIN_PASS = 'manam'
 ##########################
 
-host = 'localhost'
+host = ''#localhost'
 port = 50012
 
 

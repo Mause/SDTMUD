@@ -4,7 +4,10 @@ import os
 
 os.system('title DTMUD CLIent')
 
-host = 'localhost'
+#host = 'irc.lysdev.com'
+host = raw_input('Please enter the hostname [localhost]: ')
+if host in ['', None]:
+    host = 'localhost'
 port = 50012
 
 print 'DTMUD CLIent\nIs set to connect to localhost:50012.\nEnter either "user" mode or "admin" mode to continue'
